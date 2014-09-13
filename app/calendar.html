@@ -1,0 +1,21 @@
+<header>
+    <h2>{{months[currentDate.monthNumber]}} {{currentDate.year}}</h2>
+    <select name="month" id="month" ng-model="currentDate.monthNumber">
+        <option ng-selected="{{month == currentDate.month}}" ng-repeat="month in months" value='{{$index}}'>
+            {{$index}}
+        </option>
+    </select>{{years}}
+
+    <select name="year" id="year" ng-model="currentDate.year">
+        <option ng-selected="{{year == currentDate.year}}" ng-repeat="year in years()" value="{{year}}">
+            {{year}}
+        </option>
+    </select>
+</header>
+<section class="calendar">
+    <div class="entry" ng-repeat="entry in daysinmonth.days" ng-class="{gray: setBg(entry.month)}">
+        <span>{{entry.day}}</span>
+        {{entry.month !== currentDate.monthNumber}} {{entry.month}} {{currentDate.monthNumber}}
+    </div>
+
+</section>

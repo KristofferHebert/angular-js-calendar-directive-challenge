@@ -15,7 +15,6 @@
 <section class="calendar">
     <div class="entry" ng-repeat="entry in daysinmonth.days" ng-class="{gray: setBg(entry.month)}">
         <span>{{entry.day}}</span>
-        {{entry.month !== currentDate.monthNumber}} {{entry.month}} {{currentDate.monthNumber}}
     </div>
 
 </section>

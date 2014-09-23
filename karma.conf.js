@@ -17,8 +17,6 @@ module.exports = function (config) {
         files: [
             'app/bower_components/jquery/dist/jquery.min.js',
             'app/bower_components/angular/angular.min.js',
-            'app/app/bower_components/angular-mocks/angular-mocks.js',
-            'app/bower_components/angular/angular.min.js',
             'app/bower_components/angular-mocks/angular-mocks.js',
             'app/*.js', // this will pick up both spec and app
             'app/*.html' // for our directive templates

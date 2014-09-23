@@ -61,7 +61,7 @@ angular.module('calendarDemoApp', [])
                         return years;
                     };
                     $scope.setRange = function () {
-                        parseInt($scope.currentDate.monthNumber, 10);
+                        $scope.currentDate.monthNumber = parseInt($scope.currentDate.monthNumber, 10);
                         return $scope.daysinmonth = CalendarRange.getMonthlyRange(new Date($scope.currentDate.year, $scope.currentDate.monthNumber));
                     };
                     $scope.setBg = function (value) {
